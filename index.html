@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Postulación - AquaChile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Logo de la empresa en la esquina superior izquierda -->
+    <header class="header-logo">
+        <!-- Asegúrate de tener un archivo llamado logo.png en tu carpeta -->
+        <img src="logo.png" alt="Logo AquaChile" class="logo-esquina">
+    </header>
+
+    <div class="form-container">
+        <h2>Formulario de Postulación</h2>
+        
+        <form id="formularioPostulacion">
+            
+            <!-- Nombre Completo -->
+            <div class="form-group">
+                <label for="nombreCompleto">Nombre Completo:</label>
+                <input type="text" id="nombreCompleto" name="nombreCompleto" placeholder="Ej. Juan Pérez" required>
+            </div>
+
+            <!-- Familia de Cargo -->
+            <div class="form-group">
+                <label for="familiaCargo">Familia de Cargo:</label>
+                <select id="familiaCargo" name="familiaCargo" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="tecnologia">Tecnología / TI</option>
+                    <option value="recursos_humanos">Recursos Humanos</option>
+                    <option value="ventas">Ventas / Comercial</option>
+                    <option value="operaciones">Operaciones</option>
+                    <option value="finanzas">Finanzas</option>
+                </select>
+            </div>
+
+            <!-- Nombre del Cargo -->
+            <div class="form-group">
+                <label for="nombreCargo">Nombre del Cargo:</label>
+                <input type="text" id="nombreCargo" name="nombreCargo" placeholder="Ej. Desarrollador Frontend Senior" required>
+            </div>
+
+            <!-- Subir CV -->
+            <div class="form-group">
+                <label for="cv">Sube tu CV (PDF o DOCX, máx. 5MB):</label>
+                <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+            </div>
+
+            <!-- Botón de Envío -->
+            <button type="submit" class="btn-submit">Enviar Postulación</button>
+            
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

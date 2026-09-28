@@ -1,0 +1,143 @@
+/* --- FUENTE GENERAL --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- FONDO DIFUMINADO --- */
+body::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background-image: url('https://es.aquachile.com/wp-content/uploads/2021/07/quienes-somos.jpg'); 
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px) brightness(0.75); 
+    z-index: -1;
+}
+
+/* --- LOGO EN LA ESQUINA SUPERIOR IZQUIERDA --- */
+.header-logo {
+    position: absolute;
+    top: 15px; /* Logo más arriba según tu ajuste */
+    left: 40px;
+    z-index: 2;
+}
+
+.logo-esquina {
+    max-width: 160px; 
+    height: auto;
+}
+
+/* --- TARJETA DEL FORMULARIO (NIVEL PREMIUM) --- */
+.form-container {
+    /* Efecto Glassmorphism (Cristal) */
+    background-color: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px); 
+    
+    padding: 40px;
+    border-radius: 16px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.6); 
+    z-index: 1;
+    
+    /* Transición suave para el hover */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Animación de Levitación (Zoom) al pasar el cursor */
+.form-container:hover {
+    transform: scale(1.02) translateY(-4px); 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); 
+}
+
+/* --- ESTILOS INTERNOS DEL FORMULARIO --- */
+.form-container h2 {
+    color: #002A54; 
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 14.5px;
+    color: #002A54; 
+    margin-bottom: 8px;
+}
+
+.form-group input[type="text"],
+.form-group select {
+    padding: 12px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9); /* Ligeramente transparente para combinar con el cristal */
+}
+
+/* Efecto al hacer clic en un input */
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+    border-color: #00A3E0; 
+    box-shadow: 0 0 0 3px rgba(0, 163, 224, 0.15);
+    background-color: #ffffff; /* Se vuelve blanco sólido al escribir */
+}
+
+.form-group input[type="file"] {
+    font-size: 14px;
+    padding: 8px 0;
+    color: #555;
+}
+
+/* --- BOTÓN DE ENVÍO --- */
+.btn-submit {
+    background-color: #002A54; 
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-submit:hover {
+    background-color: #004080; 
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
